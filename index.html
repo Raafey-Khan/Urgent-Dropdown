@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dropdown">
+        <select class="dropdown-select" onclick="toggleDropdown()">
+            <option>Select Languages</option>
+        </select>
+        <div class="dropdown-content">
+            <section>
+                <label class="select-all">
+                    <input type="checkbox" id="select-all-programming" onclick="toggleSelectAll(this, 'Programming Languages')">
+                    Programming Languages
+                </label>
+                <ul class="languages">
+                    <li><input type="checkbox" class="language-option programming" value="C++/C#" onchange="updateLabel()"> C++/C#</li>
+                    <li><input type="checkbox" class="language-option programming" value="Java" onchange="updateLabel()"> Java</li>
+                    <li><input type="checkbox" class="language-option programming" value="Objective-C" onchange="updateLabel()"> Objective-C</li>
+                </ul>
+            </section>
+            <section>
+                <label class="select-all">
+                    <input type="checkbox" id="select-all-scripting" onclick="toggleSelectAll(this, 'Server Side Scripting Languages')">
+                    Server Side Scripting Languages
+                </label>
+                <ul class="languages">
+                    <li><input type="checkbox" class="language-option scripting" value="PHP" onchange="updateLabel()"> PHP</li>
+                    <li><input type="checkbox" class="language-option scripting" value="Python" onchange="updateLabel()"> Python</li>
+                    <li><input type="checkbox" class="language-option scripting" value="Ruby" onchange="updateLabel()"> Ruby</li>
+                </ul>
+            </section>
+            <!-- Repeatation more sections as needed -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
